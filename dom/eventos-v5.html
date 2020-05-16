@@ -8,6 +8,8 @@
         <span v-on:mousemove.stop>PARAR AQUI!!!!</span>
     </p>
     <a v-on:click.prevent href="http://google.com">google</a>
+
+    <input type="text" v-on:keyup.enter="exibirAlerta">
 </div>
 
 <script>
@@ -27,6 +29,9 @@
                 this.x = event.clientX
                 this.y = event.clientY
             },
+            exibirAlerta(){
+                alert("Estou alertando")
+            }
             // parar(event){
             //     event.stopPropagation()
             // }
