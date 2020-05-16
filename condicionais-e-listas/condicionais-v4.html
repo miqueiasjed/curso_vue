@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-<!-- Usando v-if com Template -->
+<!-- Usando v-show -->
 
 <div id="app">
     <!-- Usando <template> não renderiza outras tags no HTML, so o que ta dentro de template -->
@@ -14,6 +14,18 @@
 
     <button @click="logado = !logado">{{ logado ? 'Sair' : 'Entrar' }}</button>
     <input type="checkbox" v-model="anonimo">
+    
+    <hr>
+
+    <footer v-show="logado">
+        Desenvolvido para você!
+    </footer>
+
+    <footer v-show="!logado">
+        Desenvolvido para você que é desconhecido!
+    </footer>
+
+
 </div>
 
 <script>
